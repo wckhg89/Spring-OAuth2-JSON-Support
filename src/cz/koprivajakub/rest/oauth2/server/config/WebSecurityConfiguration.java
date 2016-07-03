@@ -7,6 +7,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Configuration
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
+    //TODO: Try replace @Bean of TokenEndpoint type... This should be easy
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 //        http
