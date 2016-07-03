@@ -34,7 +34,8 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
-        oauthServer.tokenKeyAccess("permitAll()").checkTokenAccess("permitAll()");
+//        oauthServer.tokenKeyAccess("permitAll()").checkTokenAccess("permitAll()"); // Use if you want to check token without HTTP Basic Auth
+        oauthServer.allowFormAuthenticationForClients(); // Disable /oauth/token Http Basic Auth
     }
 }
 
